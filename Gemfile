@@ -14,6 +14,12 @@ gem 'bootstrap-sass'
 
 gem 'bcrypt'
 
+gem 'faker'
+
+gem 'will_paginate'
+
+gem 'bootstrap-will_paginate'
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
