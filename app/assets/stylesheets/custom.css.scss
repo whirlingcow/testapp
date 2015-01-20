@@ -233,12 +233,12 @@ input {
     border-top: 1px solid #e8e8e8;
   }
   .user {
-    margin-top: 5em;
-    padding-top: 0;
+  padding-right: 15px;
+    float: left;
   }
   .content {
     display: block;
-    margin-left: 60px;
+    padding-bottom: 4%;
     img {
       display: block;
       padding: 5px 0;
@@ -246,14 +246,23 @@ input {
   }
   .timestamp {
     color: $gray-light;
-    display: block;
-    margin-left: 60px;
-  }
+    float: left;
+    padding-right: 15px;
+    }
   .gravatar {
+    float: left;
+    padding-right: 15px;
+     }
+
+  .image {
     float: left;
     margin-right: 10px;
     margin-top: 5px;
   }
+
+  .home_image{
+  float: left;
+}
 }
 
 aside {
