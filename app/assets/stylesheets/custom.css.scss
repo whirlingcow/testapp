@@ -66,6 +66,20 @@ p {
 
 /* header */
 
+.navbar {
+  background-color: #0100BE; /* place your solid color here */
+  background-image: none;
+  background-repeat: no-repeat;
+  filter: none;
+}
+
+.dropdown-menu {
+  background-color: #EEEEEE; /* place your solid color here */
+  background-image: none;
+  background-repeat: no-repeat;
+  filter: none;
+}
+
 #logo {
   float: left;
   margin-right: 10px;
@@ -74,6 +88,7 @@ p {
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
+  padding-bottom: 9px;
   font-weight: bold;
   &:hover {
     color: white;
@@ -205,5 +220,52 @@ input {
     overflow: auto;
     padding: 10px 0;
     border-bottom: 1px solid $gray-lighter;
+  }
+}
+
+/* articles */
+
+.articles {
+  list-style: none;
+  padding: 0;
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8;
+  }
+  .user {
+    margin-top: 5em;
+    padding-top: 0;
+  }
+  .content {
+    display: block;
+    margin-left: 60px;
+    img {
+      display: block;
+      padding: 5px 0;
+    }
+  }
+  .timestamp {
+    color: $gray-light;
+    display: block;
+    margin-left: 60px;
+  }
+  .gravatar {
+    float: left;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+}
+
+aside {
+  textarea {
+    height: 100px;
+    margin-bottom: 5px;
+  }
+}
+
+span.picture {
+  margin-top: 10px;
+  input {
+    border: 0;
   }
 }

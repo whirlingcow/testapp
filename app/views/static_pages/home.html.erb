@@ -1,14 +1,15 @@
 <div class="center jumbotron">
-  <h1>Welcome to The New Gameelite Test-app</h1>
-
-  <h2>
-    This is the home page for the
-    <a href="http://gameelite.se/">New Gameelite</a>
-    sample application.
-  </h2>
-
-  <%= link_to "Create Admin!", signup_path, class: "btn btn-lg btn-primary" %>
+  <h1>Välkommen till Nya Gameelite's Test-app</h1>
 </div>
 
-<%= link_to image_tag("rails.png", alt: "Gameelite logo"),
-            'http://gameelite.se/' %>
+<h1>Senaste recensionerna</h1>
+
+<% @articles.each do |article| %>
+  <p>
+  <span class="content"><%= link_to article.title, article %></span>
+  <span class="content"><%= article.content[0,250] %>...</span>
+  </p>
+  <hr/>
+<% end %>
+
+<%= will_paginate @articles %>

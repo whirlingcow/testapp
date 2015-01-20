@@ -6,6 +6,18 @@
         <%= gravatar_for @user %>
         <%= @user.name %>
       </h1>
+      <h1> 
+      <%= link_to "Create New Article", new_article_path %>
+      </h1>
     </section>
   </aside>
+<div class="col-md-8">
+    <% if @articles.any? %>
+      <h3>Articles (<%= @articles.count %>)</h3>
+      <ol class="articles">
+        <%= render @articles %>
+      </ol>
+      <%= will_paginate @articles %>
+    <% end %>
+  </div>
 </div>

@@ -1,0 +1,14 @@
+<h1><%= @articles.title %> </h1>
+<p><%= @articles.content %> </p>
+<p><%= @articles.created_at %> </p>
+<% if logged_in? %>
+	| <%= link_to "Back", root_path %>
+    | <%= link_to "Edit", edit_article_path(@articles) %>
+    | 
+    <%= link_to "Delete",@article, :confirm => "You sure?", :method => :delete %>
+    <% else %>
+    <%= link_to "Back", root_path %>
+  <% end %>
+
+
+
