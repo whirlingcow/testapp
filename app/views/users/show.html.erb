@@ -7,7 +7,9 @@
         <%= @user.name %>
       </h1>
       <h1> 
+      <% if logged_in? %>
       <%= link_to "Create New Article", new_article_path %>
+      <% end %>
       </h1>
     </section>
   </aside>
