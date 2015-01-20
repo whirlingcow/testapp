@@ -5,12 +5,14 @@
 <h1>Senaste recensionerna</h1>
 
 <% @articles.each do |article| %>
-  <p>
-  <span class="content"><%= link_to article.title, article %></span>
-  <span class="content"><%= article.content[0,250] %>...</span>
-  </p>
   <span class="image"><%= image_tag article.picture.url if article.picture? %>
   </span>
+  <h2><span class="content"><%= link_to article.title, article %></span></h2><br/>
+  <span class="content"><%= article.content[0,250] %>...</span>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(article.created_at) %> ago by
+  </span>
+  <span class="user"> | <%= link_to article.user.name, article.user %></span>
   <hr/>
 <% end %>
 
