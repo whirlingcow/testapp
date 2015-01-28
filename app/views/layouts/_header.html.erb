@@ -4,8 +4,8 @@
             root_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Home", root_path %></li>
-        <li><%= link_to "Help", help_path %></li>
+        <li><%= link_to "Startsidan", root_path %></li>
+        <li><%= link_to "Hjälp", help_path %></li>
         <li><%= link_to "Redaktionen", redaktionen_path %></li>  
         <% if logged_in? %>
           <li class="dropdown">
@@ -13,18 +13,18 @@
               Account <b class="caret"></b>
             </a>
             <ul class="dropdown-menu">
-              <li><%= link_to "Profile", current_user %></li>
-              <li><%= link_to "Create New Article", new_article_path %></li>
-              <li><%= link_to "Handle Users", users_path %></li>
-              <li><%= link_to "Settings", edit_user_path(current_user) %></li>
+              <li><%= link_to "Profil", current_user %></li>
+              <li><%= link_to "Skapa Ny Artikel", new_article_path %></li>
+              <li><%= link_to "Hantera användare", users_path %></li>
+              <li><%= link_to "Inställningar", edit_user_path(current_user) %></li>
               <li class="divider"></li>
               <li>
-                <%= link_to "Log out", logout_path, method: "delete" %>
+                <%= link_to "Logga ut", logout_path, method: "delete" %>
               </li>
             </ul>
           </li>
         <% else %>
-          <li><%= link_to "Log in", login_path %></li>
+          <li><%= link_to "Logga in", login_path %></li>
         <% end %>
       </ul>
     </nav>

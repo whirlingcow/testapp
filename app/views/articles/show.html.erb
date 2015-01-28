@@ -2,12 +2,12 @@
 <p><%= @articles.content %> </p>
 <p><%= @articles.created_at %> </p>
 <% if logged_in? %>
-	| <%= link_to "Back", root_path %>
-    | <%= link_to "Edit", edit_article_path(@articles) %>
+	| <%= link_to "Tillbaka", root_path %>
+    | <%= link_to "Redigera", edit_article_path(@articles) %>
     | 
-    <%= link_to "Delete",@article, :confirm => "You sure?", :method => :delete %>
+    <%= link_to "Ta bort",@article, :confirm => "Är du säker?", :method => :delete %>
     <% else %>
-    <%= link_to "Back", root_path %>
+    <%= link_to "Tillbaka", root_path %>
   <% end %>
 
 

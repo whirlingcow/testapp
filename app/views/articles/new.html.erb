@@ -1,9 +1,9 @@
-<h1> Create a new article </h1>
+<h1> Skapa en ny artikel </h1>
 
 <%= form_for(@article, html: { multipart: true }) do |f| %>
 		<p> <%= f.label :title %> <%= f.text_field :title %> </p>
 		<p> <%= f.label :content %> <%= f.text_area :content %> </p>
-		<p> <%= f.submit "Add new article" %></p>
+		<p> <%= f.submit "Lägg till ny artikel" %></p>
 		<span class="picture">
     <%= f.file_field :picture %>
   </span>
